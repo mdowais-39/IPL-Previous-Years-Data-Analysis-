@@ -1,103 +1,109 @@
-# 🎥 MovieLens 100k Data Visualization Project
+# IPL Performance Data Analysis – Batters, Bowlers & Venue Insights
 
-![MovieLens Banner](https://img.shields.io/badge/Dataset-MovieLens%20100k-blueviolet) ![R Version](https://img.shields.io/badge/R-4.0%2B-brightgreen) ![License](https://img.shields.io/badge/License-MIT-yellow)
+### 📊 Project Overview
+This project is an **in-depth data analysis of IPL performances** across multiple seasons, focusing on **batters, bowlers, wicketkeepers, head-to-head matchups, and venue-specific performance trends**.  
 
-## 🌟 Overview
-Welcome to the MovieLens 100k Data Visualization Project! This repository houses an engaging R-based analysis of the classic MovieLens 100k dataset. Dive into the world of movie ratings, user demographics, and genre trends through a series of insightful visualizations created with ggplot2.
+The analysis explores **historical patterns** in player and team performance, aiming to uncover **key insights** that can help in performance evaluation, fantasy team selection, and strategic planning.
 
-Whether you're a data enthusiast, a film buff, or just curious about user preferences in movies, this project uncovers patterns like average ratings by genre, gender differences in tastes, age group preferences, and even how genre popularity evolves over time. All visualizations include a subtle "Owais" annotation as a watermark.
+---
 
-## 📊 Dataset
-The [MovieLens 100k dataset](https://grouplens.org/datasets/movielens/100k/) is a staple in recommendation systems research. It includes:
-- **100,000 ratings** from 943 users on 1,682 movies.
-- User demographics (age, gender, occupation, zip code).
-- Movie details (title, release date, genres).
+## 🎯 Objectives
+- Analyze **batting, bowling, and wicketkeeping performance** over multiple IPL seasons.
+- Examine **head-to-head matchups** between teams to identify dominance patterns.
+- Evaluate **venue-specific performances** for both batters and bowlers.
+- Compare **team performances in home vs away matches**.
+- Provide **actionable visual insights** for cricket analysts, fans, and fantasy players.
 
-Key files used:
-- `u.data`: Ratings.
-- `u.user`: User info.
-- `u.item`: Movie info with genres.
+---
 
-Download the dataset and place it in a `data/ml-100k/` directory within the repo for easy access.
+## 📂 Analysis Sections
 
-## 🔍 Visualizations
-This project features 10 stunning visualizations, each revealing unique insights:
+### 1️⃣ Batter Analysis
+- Top run-scorers
+- Strike rates & averages
+- Performance consistency over seasons
 
-1. **Average Rating of All Genres**  
-   A bar chart showing the mean rating for each genre, highlighting favorites like Film-Noir and Drama.
+*Example Output:*  
+![Batter Performance](images/batter_performance.png)
 
-2. **Most Popular Genres by Number of Ratings**  
-   Bar chart ranking genres by popularity based on rating counts—Drama and Comedy often top the list!
+---
 
-3. **Top 10 Movies by Number of Ratings**  
-   Discover the most-rated movies, like Star Wars or Pulp Fiction, in this flipped bar chart.
+### 2️⃣ Bowler Analysis
+- Leading wicket-takers
+- Economy rates & bowling averages
+- Impact in powerplay, middle overs, and death overs
 
-4. **Average Rating by Genre and Gender**  
-   Grouped bar chart comparing how males and females rate different genres—spot the differences!
+*Example Output:*  
+![Bowler Performance](images/bowler_performance.png)
 
-5. **Average Number of Movies Rated by Gender**  
-   A simple bar chart illustrating if one gender rates more movies on average.
+---
 
-6. **Highest Rated Movie in Each Genre**  
-   Bar chart with labels showing the top-rated movie per genre (filtered for at least 20 ratings).
+### 3️⃣ Wicketkeeper Analysis
+- Most dismissals by a keeper
+- Batting contribution from wicketkeepers
+- Impact on match outcomes
 
-7. **Average Movie Ratings by Age Group**  
-   Explore how ratings vary across age brackets, from <18 to 65+.
+---
 
-8. **Average Movie Ratings by Occupation**  
-   See if artists rate higher than engineers in this occupation-based bar chart.
+### 4️⃣ Head-to-Head Records
+- Historical win/loss ratios between IPL teams
+- Dominance patterns in rivalries
 
-9. **Average Ratings of Genres by Age Group**  
-   A heatmap visualizing genre preferences across age groups—perfect for spotting trends like younger users loving Sci-Fi.
+*Example Output:*  
+![Head to Head](images/head_to_head.png)
 
-10. **Genre Popularity Over Time**  
-    Line chart tracking the number of ratings per genre by year, showing evolving user interests.
+---
 
-All plots are generated in `Lab_1.R` and can be customized further.
+### 5️⃣ Venue-Specific Analysis
+- **Bowler Venue Performance** – Best & worst venues for bowlers  
+- **Batter Venue Performance** – Venue impact on batting stats
 
-## 🛠️ Setup Instructions
-1. **Clone the Repository**:
-   ```
-   git clone https://github.com/your-username/movielens-100k-viz.git
-   cd movielens-100k-viz
-   ```
+---
 
-2. **Download the Dataset**:
-   - Head to [GroupLens](https://grouplens.org/datasets/movielens/100k/).
-   - Extract to `data/ml-100k/` (adjust `setwd()` in the script if needed).
+### 6️⃣ Team Home vs Away Performance
+- Comparative performance of teams in home grounds vs away matches
+- Effect of crowd & pitch familiarity
 
-3. **Install R Packages**:
-   Run the following in R to install dependencies:
-   ```R
-   install.packages(c("ggplot2", "dplyr", "tidyr", "lubridate"))
-   ```
+---
 
-4. **Run the Script**:
-   Open `Lab_1.R` in RStudio or your preferred R environment and source it:
-   ```R
-   source("Lab_1.R")
-   ```
-   This will load the data, merge it, and generate all visualizations.
+## 🛠 Tech Stack
+- **Python** 🐍
+- **Pandas** – Data wrangling
+- **NumPy** – Numerical operations
+- **Matplotlib / Seaborn** – Data visualization
+- **Jupyter Notebook** – Interactive analysis
 
-## 📋 Requirements
-- **R Version**: 4.0 or higher.
-- **Packages**:
-  - ggplot2 (for plotting)
-  - dplyr (for data manipulation with %>%)
-  - tidyr (for pivot_longer)
-  - lubridate (for date handling)
+---
 
-Install them via the command above. No additional setup required—base R handles the rest!
+## 📈 Methodology
+1. **Data Collection** – Historical IPL datasets (batting, bowling, venues, and match results)
+2. **Data Cleaning & Processing** – Handling missing values, standardizing formats
+3. **Feature Engineering** – Creating performance metrics like strike rate, economy rate, venue-adjusted stats
+4. **Exploratory Data Analysis (EDA)** – Using visualizations and statistical summaries
+5. **Insight Generation** – Identifying patterns and trends
 
-## 🚀 Usage
-- Modify `setwd()` to point to your dataset path.
-- Run the script to generate plots interactively.
-- Export plots with `ggsave()` if needed (e.g., `ggsave("plot1.png", plot_object)`).
+---
 
-## 🤝 Contributing
-Love movies or data viz? Fork this repo, add new insights (e.g., more advanced stats or interactive plots with shiny), and submit a pull request. Issues and suggestions are welcome!
+## 🚀 How to Run
+```bash
+# Clone the repository
+git clone [https://github.com/mdowais-39/IPL-Previous-Years-Data-Analysis-]
 
-## 📄 License
-This project is licensed under the MIT License—feel free to use and adapt.
+# Navigate to the project folder
+cd ipl-performance-analysis
 
-Happy visualizing! 🍿
+# Install dependencies
+pip install -r requirements.txt
+
+# Run the notebook
+jupyter notebook "FIFS data_analysis.ipynb"
+```
+
+---
+
+## 📌 Future Improvements
+- Integrate **predictive modeling** for performance forecasting
+- Create **interactive dashboards** with Plotly/Dash
+- Automate **real-time data updates** from live IPL matches
+
+---
